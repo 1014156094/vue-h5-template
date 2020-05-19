@@ -1,0 +1,7 @@
+[defaults]
+url = https://sentry.tongxinghui.com/
+org = sentry
+project = hsl-h5
+
+[auth]
+token = ebd6421e612c4a70b2b5a57682a6016c9cd0cdf6cd094be28b8c50cd1e982b8a

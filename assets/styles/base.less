@@ -1,0 +1,59 @@
+// 基础样式表，用于初始化样式或覆盖样式
+
+body,
+html {
+  font-size: 14px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'PingFang SC',
+    'Hiragino Sans GB', 'Microsoft YaHei', 'Helvetica Neue', Helvetica, Arial,
+    sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; // 参考自 Ant Design
+  min-height: 100vh;
+  background: #fff;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+}
+
+// 修复 vue-lazyload 图片变形 start
+img[lazy='loading'] {
+  object-fit: none !important;
+}
+
+*[lazy='loading']{
+  background-size: auto !important;
+  background-repeat: no-repeat !important;
+}
+// 修复 vue-lazyload 图片变形 end
+
+
+// 阿里图标库
+.icon {
+  overflow: hidden;
+  width: 1em;
+  height: 1em;
+  fill: currentColor;
+  vertical-align: -0.15em;
+}
+
+// 滚动条美化 start
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.1);
+  background-color: #f8f8f8;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 8px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+::-webkit-scrollbar-thumb:window-inactive {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+// 滚动条美化 end

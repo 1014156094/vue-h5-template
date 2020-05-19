@@ -1,0 +1,40 @@
+// 为 PC 端做的响应式兼容
+
+@media screen and (min-width: 640px) {
+  // 背景留白
+  body {
+    background-color: #f6f6f6;
+  }
+
+  // 定义响应宽度
+  .responsive-desktop-width {
+    width: 374px;
+    max-width: 374px;
+  }
+
+  // 定义非相对布局元素的响应式居中
+  .responsive-to-center {
+    .responsive-desktop-width;
+    left: 50% !important;
+    transform: translateX(-50%);
+  }
+
+  // 居中内容
+  #__nuxt {
+    .responsive-desktop-width;
+    margin: 0 auto;
+    box-shadow: 0 6px 20px 5px rgba(255, 127, 0, 0.05),
+      0 16px 24px 2px rgba(0, 0, 0, 0.01);
+  }
+
+  #__layout > div > div.page-wrap {
+    border: 1px solid transparent; // 解决 margin 塌陷问题
+    min-height: 100vh; // 解决的大赛描述内容不够长时页面留白的问题
+  }
+
+  // vant 框架 popup 弹窗居中
+  .van-popup {
+    .responsive-to-center;
+    transition: none !important;
+  }
+}

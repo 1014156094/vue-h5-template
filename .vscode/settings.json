@@ -1,0 +1,59 @@
+// VSCode 配置，用于规范美化团队代码
+
+{
+    // 显示垂直标尺的列，代码长度最好不要超出标尺的位置，以免影响代码阅读性
+    "editor.rulers": [
+        80
+    ],
+    // 设置按 tab 键是 2 个空格
+    "editor.tabSize": 2,
+    // 启用后，显示右上角的小地图
+    "editor.minimap.enabled": true,
+    // 启用后，当其前缀匹配时显示代码提示
+    "editor.quickSuggestions": {
+        "strings": true
+    },
+    // eslint 保存自动格式化，与 editor.formatOnSave 冲突
+    "editor.codeActionsOnSave": {
+        "source.fixAll.eslint": true
+    },
+    // eslint 保存自动格式化
+    "eslint.validate": [
+        {
+            "language": "html",
+            "autoFix": true
+        },
+        {
+            "language": "javascript",
+            "autoFix": true
+        },
+        {
+            "language": "javascriptreact",
+            "autoFix": true
+        },
+        {
+            "language": "typescript",
+            "autoFix": true
+        },
+        {
+            "language": "typescriptreact",
+            "autoFix": true
+        },
+        {
+            "language": "vue",
+            "autoFix": true
+        }
+    ],
+    // 启用后，保存文件时在文件末尾插入一个最终新行
+    "files.insertFinalNewline": true,
+    // path-intellisense 拓展配置，映射路径 @ 开头的路径
+    "path-intellisense.mappings": {
+        "@": "${workspaceRoot}"
+    },
+    // 覆盖当前所选颜色主题的颜色，自定义当前缩进的颜色
+    "workbench.colorCustomizations": {
+        "editorIndentGuide.activeBackground": "#00ffff"
+    },
+    // 拼写检查程序要忽略的单词列表
+    "cSpell.ignoreWords": [],
+}

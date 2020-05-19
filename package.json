@@ -1,0 +1,47 @@
+{
+  "name": "vue-h5-template",
+  "version": "1.0.0",
+  "description": "vue-h5-template",
+  "author": "LiRiPeng",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "dev:prod": "cross-env NODE_ENV=production npm run dev",
+    "build": "nuxt build",
+    "build:dev": "cross-env NODE_ENV=development npm run build",
+    "start": "nuxt start",
+    "generate": "nuxt generate",
+    "lint": "eslint --ext .js,.vue --ignore-path .eslintignore .",
+    "lintfix": "eslint --fix --ext .js,.vue --ignore-path .eslintignore .",
+    "sentry-release": "cross-env SENTRY_RELEASE=true yarn build"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.8.0",
+    "@nuxtjs/style-resources": "^1.0.0",
+    "babel-polyfill": "^6.26.0",
+    "js-cookie": "^2.2.1",
+    "normalize.css": "^8.0.1",
+    "nuxt": "^2.11.0",
+    "url-search-params-polyfill": "^7.0.0",
+    "vant": "^2.5.7",
+    "vconsole": "^3.3.4"
+  },
+  "devDependencies": {
+    "@nuxtjs/sentry": "^3.0.1",
+    "babel-plugin-import": "^1.12.2",
+    "cross-env": "^6.0.3",
+    "eslint": "^6.0.1",
+    "eslint-config-prettier": "^6.0.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-vue": "^5.2.3",
+    "husky": "^3.0.9",
+    "less": "^3.10.3",
+    "less-loader": "^5.0.0",
+    "prettier": "1.14.3"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint"
+    }
+  }
+}
